@@ -1,0 +1,65 @@
+Book
+	book_id
+	title
+	ISBN
+	publication_id (foreign key)
+
+Book Edition
+	book_edition_id
+	publisher
+	
+Book Copy
+	book_copy_id
+	book_edition_id (foreign key)
+	number (broj u biblioteci)
+	available (boolean)
+
+Publisher
+	publisher_id
+	name
+	address
+	phone1
+	phone2
+	email
+	website
+	...
+	
+Author
+	author_id
+	name
+	surname
+	middle_name
+	
+Author_book
+	author_id (foreign key)
+	book_id (foreign key)
+	
+User
+	user_id
+	role (admin, librarian, member)
+	username
+	password
+	name
+	surname
+	email
+	phone1
+	phone2
+	address
+	IDnumber (jmbg)
+	Image
+	newsletter_subscription
+
+Membership
+	membership_id
+	user_id (foreign key)
+	date_start
+	date_end
+	card_number
+
+Lease
+	lease_id
+	user_id (foreign key)
+	book_copy_id (foreign key)
+	date_leased
+	latest_day_of_return
+	
